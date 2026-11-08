@@ -57,19 +57,19 @@ Superstore-SQL-Analysis/
 ## Screenshots
 
 ### Sales and profit by year
-![Sales by year](reports/01_sales_by_year.png)
+![Sales by year](reports/1_sales_by_year.png)
 
 ### Profit margin by category
-![Category margin](reports/02_category_margin.png)
+![Category margin](reports/2_category_margin.png)
 
 ### Profit margin by region
-![Region margin](reports/03_region_margin.png)
+![Region margin](reports/3_region_margin.png)
 
 ### Top 10 products by sales
-![Top products](reports/04_top_products.png)
+![Top products](reports/4_top_products.png)
 
 ### Profit by sub-category
-![Sub-category profit](reports/05_subcategory_profit.png)
+![Sub-category profit](reports/5_subcategory_profit.png)
 
 ## How to Run
 
