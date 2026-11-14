@@ -30,11 +30,11 @@ Superstore-SQL-Analysis/
 └── README.md
 ```
 
-| File | What it does |
-|---|---|
-| `01_sales_analysis.sql` | Creates a helper view with year and month, then analyzes sales and profit by year, month, category and region, plus average discount and average order value |
-| `02_customer_product_analysis.sql` | Finds top customers, compares segments, and ranks products and sub-categories by sales and profit |
-| `03_advanced_analysis.sql` | Uses CTEs and window functions for year-over-year growth, profit rankings, top product per category and running totals |
+| File                               | What it does                                                                                                                                                 |
+| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `01_sales_analysis.sql`            | Creates a helper view with year and month, then analyzes sales and profit by year, month, category and region, plus average discount and average order value |
+| `02_customer_product_analysis.sql` | Finds top customers, compares segments, and ranks products and sub-categories by sales and profit                                                            |
+| `03_advanced_analysis.sql`         | Uses CTEs and window functions for year-over-year growth, profit rankings, top product per category and running totals                                       |
 
 ## Business Questions
 
@@ -57,18 +57,23 @@ Superstore-SQL-Analysis/
 ## Screenshots
 
 ### Sales and profit by year
+
 ![Sales by year](reports/01_sales_by_year.png)
 
 ### Profit margin by category
+
 ![Category margin](reports/02_category_margin.png)
 
 ### Profit margin by region
+
 ![Region margin](reports/03_region_margin.png)
 
 ### Top 10 products by sales
+
 ![Top products](reports/04_top_products.png)
 
 ### Profit by sub-category
+
 ![Sub-category profit](reports/05_subcategory_profit.png)
 
 ## How to Run
@@ -82,10 +87,24 @@ Note: `01_sales_analysis.sql` creates the `orders_clean` view that the other fil
 
 To rebuild the database from scratch, create a new database and import `dataset/Sample - Superstore.csv` with **File > Import > Table from CSV file**, naming the table `superstore`.
 
+## Power BI Dashboard
+
+An interactive 2-page dashboard built from the same Superstore data.
+
+- **Overview:** KPI cards, slicers (year, region, segment), sales by year, sales by category and profit by sub-category
+- **Margins & Products:** a DAX profit margin measure, margin by region and category, and the top 10 products by sales
+
+![Overview](powerbi/01_overview.png)
+![Margins and Products](powerbi/02_margins_products.png)
+
+**Insight:** high sales don't always mean profit. Among the top 10 products by sales, the Cisco TelePresence System (about -1,811) and the GBC DocuBind P400 (about -1,878) lose money.
+
 ## Next Steps
 
-- Build an interactive Power BI dashboard using the same Superstore data.
-- Extend the analysis with statistics and Python (Pandas).
+- Repeat the analysis in Python with Pandas to compare results with the SQL queries.
+- Use statistics to test whether higher discounts are linked to lower profit, especially in Furniture.
+- Explore the loss-making products and sub-categories in more depth, such as Tables.
+- Add a year-over-year sales trend and forecast.
 
 ## Author
 
